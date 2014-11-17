@@ -1,0 +1,8 @@
+<ul class="meals">
+    <li class="meal" ng-repeat="meal in menu.meals">
+        <h4 class="name">{{meal.name}}</h4>
+        <img class="image" ng-src="{{meal.primaryImageUrl}}">
+        <div class="description">{{meal.description}}</div>
+        <div class="price">{{meal.price}}</div>
+    </li>
+</ul>

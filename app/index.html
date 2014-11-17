@@ -2,127 +2,72 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>FOODit-jsTest</title>
+    <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="/favicon.ico">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css styles/vendor.css -->
+    <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body>
-    <!--[if lt IE 10]>
+  <body ng-app="jstestApp">
+    <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <!-- Add your site or application content here -->
     <div class="container">
-      <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">FOODit-jsTest</a>
-            <ul class="nav navbar-nav">
-              <li><a href="#menu">Menu</a></li>
-              <li><a href="#orders">Orders</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div id="main"></div>
+      <div class="header">
+        <h3 class="text-muted">Menu</h3>
+      </div>
+
+      <div ng-view=""></div>
+
+      <div class="footer">
+        <p><span class="glyphicon glyphicon-heart"></span> from FOODit and the Yeoman team.</p>
+      </div>
     </div>
 
-    <script type="text/x-underscore-template" id="t-main">
-      <div class="jumbotron">
-        <h1>FOODit-jsTest</h1>
-        <p>
-          Hi, this is a test to challange your front-end web development capabilities.<br>
-          <a href="" target="_blank">Read the guide on Github to get started.</a>
-        </p>
-      </div>
-    </script>
-    <script type="text/x-underscore-template" id="t-restaurants-select">
-      <select id="restaurants-select" class="form-control">
-        <option value="" class="muted">choose a restaurant ...</option>
-        <% _.each(restaurants, function (id) { %>
-          <option value="<%= id %>"><%= id %></option>
-        <% }); %>
-      </select>
-    </script>
-    <script type="text/x-underscore-template" id="t-menu-container">
-      <div class="form-group" id="restaurants-select-group">
-        <label for="restaurants-select">Restaurant</label>
-      </div>
-    </script>
-    <script type="text/x-underscore-template" id="t-menu">
-      <% if (typeof menu !== 'undefined') { _.each(menu, function (meals, category) { %>
-        <h2><%= category %></h2>
-        <table class="table">
-          <thead>
-            <th>Name</th>
-            <th>Price</th>
-          </thead>
-          <tbody>
-            <% _.each(meals, function (meal) { %>
-              <tr>
-                <td><%= meal.name %></td>
-                <td><%= meal.startingFromPrice %></td>
-              </tr>
-            <% }); %>
-          </tbody>
-        </table>
-      <% }); } %>
-    </script>
-    <script type="text/x-underscore-template" id="t-orders">
-      <div class="form-group" id="restaurants-select-group">
-        <label for="restaurants-select">Restaurant</label>
-      </div>
-      <table class="table">
-        <thead>
-          <th>Date</th>
-          <th>Status</th>
-          <th>Collect/deliver</th>
-          <th>Total</th>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-    </script>
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
 
-    <!-- build:js scripts/vendor.js -->
+    <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/underscore/underscore.js"></script>
-    <script src="../bower_components/backbone/backbone.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:js scripts/plugins.js -->
-    <!--<script src="../bower_components/bootstrap/js/affix.js"></script>-->
-    <!--<script src="../bower_components/bootstrap/js/alert.js"></script>-->
-    <!--<script src="../bower_components/bootstrap/js/dropdown.js"></script>-->
-    <!--<script src="../bower_components/bootstrap/js/tooltip.js"></script>-->
-    <!--<script src="../bower_components/bootstrap/js/modal.js"></script>-->
-    <!--<script src="../bower_components/bootstrap/js/transition.js"></script>-->
-    <!--<script src="../bower_components/bootstrap/js/button.js"></script>-->
-    <!--<script src="../bower_components/bootstrap/js/popover.js"></script>-->
-    <!--<script src="../bower_components/bootstrap/js/carousel.js"></script>-->
-    <!--<script src="../bower_components/bootstrap/js/scrollspy.js"></script>-->
-    <!--<script src="../bower_components/bootstrap/js/collapse.js"></script>-->
-    <!--<script src="../bower_components/bootstrap/js/tab.js"></script>-->
-    <!-- endbuild -->
-
-    <!-- build:js({app,.tmp}) scripts/main.js -->
-    <script src="scripts/base.js"></script>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/restaurants.js"></script>
-    <script src="scripts/orders.js"></script>
-    <script src="scripts/menu.js"></script>
-    <script src="scripts/init.js"></script>
-    <!-- endbuild -->
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/services/menuservice.js"></script>
+        <!-- endbuild -->
 </body>
 </html>

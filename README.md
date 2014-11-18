@@ -19,7 +19,17 @@ FOODit-jsTest
 
 ## What we expect from you
 
-TBD
+The frontend task involves building up the base angular app to match the mobile designs included in the repo.
+The solution should take into account: 
+
+- This is a mobile design which would be accessed by various devises/browsers.
+
+- It should be as true to the designs as possible, but candidates should feel free to add anything that improves the flow/design.
+
+- A solution should show an understanding of the problems involved and make use of the tech stack to solve them.
+
+![Design overview](/design/mockups/menu_design--overview.jpg?raw=true "Design overview")
+
 
 ## A little guidance
 

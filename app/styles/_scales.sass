@@ -1,0 +1,13 @@
+/////////////////////////////////////////////
+// Perfect Fourth Modular Scale
+// base: 17
+// important: 280
+// $scale__17_280--perfect_fourth
+
+$scale__17_280--perfect_fourth: 0.07, 0.075, 0.093, 0.1, 0.124, 0.134, 0.166, 0.178, 0.221, 0.238, 0.295, 0.317, 0.393, 0.422, 0.523, 0.563, 0.698, 0.75, 0.93, 1, 1.239, 1.333, 1.652, 1.777, 2.202, 2.369, 2.936, 3.157, 3.913, 4.209, 5.217, 5.61, 6.954, 7.479, 9.269, 9.969, 12.356, 13.289, 16.471, 17.714, 21.955, 23.612, 29.266, 31.475, 39.012, 41.956, 52.003, 55.928, 69.32
+
+@function scaled-value($base, $position, $units: 1)
+  $scale: $scale__17_280--perfect_fourth
+  $multiplier: nth($scale, $position)
+  $value: $base * $multiplier * $units
+  @return $value

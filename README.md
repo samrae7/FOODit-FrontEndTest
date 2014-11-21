@@ -24,6 +24,8 @@ The solution should take into account:
 
 - This is a mobile design which would be accessed by various devises/browsers.
 
+- The contents of the basket will be retained between browser reloads.
+
 - It should be as true to the designs as possible, but candidates should feel free to add anything that improves the flow/design.
 
 - A solution should show an understanding of the problems involved and make use of the tech stack to solve them.

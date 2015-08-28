@@ -30,6 +30,8 @@ The solution should take into account:
 
 - A solution should show an understanding of the problems involved and make use of the tech stack to solve them.
 
+- We prefer code that is modular and has tests.
+
 ![Design overview](/design/mockups/menu_design--overview.jpg?raw=true "Design overview")
 
 

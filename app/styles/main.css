@@ -1,0 +1,61 @@
+h1, h2, h3, h4, h5, p {
+  margin-bottom: 0px; }
+
+h1.large {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 70.434px;
+  line-height: 56.826px; }
+
+h1.light {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 39.636px;
+  line-height: 39.636px; }
+
+h1 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 39.636px;
+  line-height: 39.636px; }
+
+h2 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 31.986px;
+  line-height: 31.986px; }
+
+h3 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 23.994px;
+  line-height: 31.992px; }
+
+h4 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+  line-height: 18px; }
+
+p {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 16.74px;
+  line-height: 22.32px;
+  margin-bottom: 0px; }
+
+.sub, p.sub {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 13.5px;
+  line-height: 18px; }
+
+b, .bold {
+  font-family: Verdana, Geneva, sans-serif; }
+
+body {
+  background-color: lightgrey; }
+
+img {
+  width: 90%; }
+
+.header {
+  background-color: red;
+  padding: 1em; }
+
+.wrapper ul {
+  list-style: none; }
+
+/*# sourceMappingURL=main.css.map */

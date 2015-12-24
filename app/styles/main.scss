@@ -2,10 +2,108 @@
 @import 'typography';
 @import 'colors';
 
-body {
-  background-color: pink;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-img {
-  width:90%;
+body {
+  background-color: lightgrey;
+  margin: 0;
 }
+
+.blue-box {
+  background-color: blue;
+  color: white;
+  padding:0.2em;
+  font-style:italic;
+}
+
+.header {
+  background-color: red;
+  padding: 1em;
+
+  p {
+    text-align:center;
+  }
+}
+
+.wrapper {
+  padding: 1em;
+
+  h4 {
+    text-align: center;
+  }
+
+
+  ul {
+    list-style: none;
+    padding:0;
+
+    .image-holder {
+      position:relative;
+      height:227px;
+      overflow: hidden;
+
+      .price {
+        @extend .blue-box;
+        position:absolute;
+        left:calc(50% - 28px);  
+        top:0;
+        z-index:1;
+      }
+
+      img.image {
+        width: 100%;
+        position:absolute;
+      }
+
+      .name {
+        height: 75px;
+        position: relative;
+        opacity: 0.8;
+        z-index: 1;
+        background-color: lightgrey;
+        top: 67%;
+        padding-top: 1px;
+
+      img.name-curve {
+        position: absolute;
+        left: 0;
+        top: -8px;
+        width: 100%;
+      }
+    }
+
+
+
+      h4 {
+        margin-top: 1em;
+      }
+
+    }
+
+    .details {
+      background-color: white;
+      padding:1.5em;
+      position:relative;
+      z-index:2;
+
+      img.curve {
+        position: absolute;
+        left: 0;
+        top: -8px;
+        width: 100%;
+      }
+
+      .order-button {
+        @extend .blue-box;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+
+

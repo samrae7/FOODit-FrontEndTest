@@ -14,8 +14,17 @@
         </div>
 
         <div class="details">
-          <img class="curve" src="../images/meal-card__curve.svg">
+          <div class="tags-container">
+            <div class="tags">
+              <ul class="tag-list">
+                <li class="tag-list-item" ng-repeat="tag in meal.tags | filter:'!#'">
+                  <img class="tag" src="../images/tag--{{tag}}.svg">
+                </li>
+              <ul>
+            </div>
+          </div>
           
+          <img class="curve" src="../images/meal-card__curve.svg">
           <p class="description">{{meal.description}}</p>
           <div class="order-button"><p>Add To Your Order</p></div>
           <p class="options-text">3 options available</p>

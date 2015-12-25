@@ -15,7 +15,7 @@ body {
 .blue-box {
   background-color: blue;
   color: white;
-  padding:0.2em;
+  padding:0.5em;
   font-style:italic;
 }
 
@@ -23,16 +23,23 @@ body {
   background-color: red;
   padding: 1em;
 
-  p {
-    text-align:center;
+  .header-text-box {
+    background-color: salmon;
+    color:white;
+    padding: 0.4em 0.85em;
+
+    p {
+      text-align:center;
+    }
   }
 }
 
 .wrapper {
   padding: 1em;
 
-  h4 {
-    text-align: center;
+  h3 {
+    font-weight: 500;
+    margin-bottom: 10px;
   }
 
 
@@ -40,68 +47,85 @@ body {
     list-style: none;
     padding:0;
 
-    .image-holder {
-      position:relative;
-      height:227px;
-      overflow: hidden;
+    li {
+      padding-bottom: 1em;
 
-      .price {
-        @extend .blue-box;
-        position:absolute;
-        left:calc(50% - 28px);  
-        top:0;
-        z-index:1;
+      .image-holder {
+        position:relative;
+        height:250px;
+        overflow: hidden;
+
+        .price {
+          @extend .blue-box;
+          position:absolute;
+          left:calc(50% - 28px);  
+          top:0;
+          z-index:1;
+        }
+
+        img.image {
+          position:absolute;
+          min-height:250px;
+          width:100%;
+
+        }
+
+        .name {
+          height: 75px;
+          position: relative;
+          opacity: 0.8;
+          z-index: 1;
+          background-color: lightgrey;
+          top: 72%;
+          padding-top: 1px;
+
+
+          h4 {
+            margin-top: 1em;
+            text-align: center;
+            font-size: 21px;
+            font-weight:500;
+          }
+
+          img.name-curve {
+            position: absolute;
+            left: 0;
+            top: -8px;
+            width: 100%;
+          }
+        }
       }
 
-      img.image {
-        width: 100%;
-        position:absolute;
-      }
+      .details {
+        background-color: white;
+        padding:1.5em;
+        position:relative;
+        z-index:2;
 
-      .name {
-        height: 75px;
-        position: relative;
-        opacity: 0.8;
-        z-index: 1;
-        background-color: lightgrey;
-        top: 67%;
-        padding-top: 1px;
+        img.curve {
+          position: absolute;
+          left: 0;
+          top: -8px;
+          width: 100%;
+        }
 
-      img.name-curve {
-        position: absolute;
-        left: 0;
-        top: -8px;
-        width: 100%;
-      }
-    }
+        .order-button {
+          @extend .blue-box;
+          text-align: center;
+          margin: 1em 0 0.5em 0;
+        }
 
-
-
-      h4 {
-        margin-top: 1em;
-      }
-
-    }
-
-    .details {
-      background-color: white;
-      padding:1.5em;
-      position:relative;
-      z-index:2;
-
-      img.curve {
-        position: absolute;
-        left: 0;
-        top: -8px;
-        width: 100%;
-      }
-
-      .order-button {
-        @extend .blue-box;
-        text-align: center;
+        .options-text {
+          font-size: 0.8em;
+        }
       }
     }
   }
+}
+
+.footer {
+  text-align: center;
+  padding-bottom: 1em;
 }
 
 

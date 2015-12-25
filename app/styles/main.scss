@@ -8,23 +8,23 @@
 }
 
 body {
-  background-color: lightgrey;
+  background-color: $background-color;
   margin: 0;
 }
 
 .blue-box {
-  background-color: blue;
+  background-color: $cornflower-blue;
   color: white;
   padding:0.5em;
   font-style:italic;
 }
 
 .header {
-  background-color: red;
+  background-color: $header-color;
   padding: 1em;
 
   .header-text-box {
-    background-color: salmon;
+    background-color: $header-text-box-color;
     color:white;
     padding: 0.4em 0.85em;
 

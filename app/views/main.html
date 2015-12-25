@@ -17,7 +17,7 @@
           <div class="tags-container">
             <div class="tags">
               <ul class="tag-list">
-                <li class="tag-list-item" ng-repeat="tag in meal.tags | filter:'!#'">
+                <li class="tag-list-item" ng-repeat="tag in meal.tags | filter:'!#'| filter:'!beef' | filter:'!barbecue'">
                   <img class="tag" src="../images/tag--{{tag}}.svg">
                 </li>
               <ul>

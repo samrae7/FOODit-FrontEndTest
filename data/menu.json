@@ -93,7 +93,7 @@
 		"description": "",
 		"price": "11.50",
 		"primaryImageUrl": "http://lh5.ggpht.com/wvukIIbUpbLKAOyTdbJ0ZUpqdsuJT5UHNSpV4tk0-7jHGjb5PD80sTy2lt6eQMs29Qf2qsUdq9jbmmJgtShuLrvn",
-		"tags": ["#course:main_courses", "technique:grilled", "#diet:high_in_protein", "lamb"]
+		"tags": ["#course:main_courses", "#technique:grilled", "#diet:high_in_protein", "lamb"]
 	},
 	{
 		"id": "5e4da50068f9a9494acd154308fd439e",

@@ -8,7 +8,7 @@
  * Controller of the jstestApp
  */
 angular.module('jstestApp')
-  .controller('MainCtrl', ['$scope', 'MenuService', function ($scope, MenuService) {
+  .controller('MainCtrl', ['$scope', 'MenuService','BasketService', function ($scope, MenuService, BasketService) {
   	$scope.menu = {};
       MenuService.get('/data/menu.json').success(function(data) {
   	  $scope.menu = data;
@@ -21,6 +21,6 @@ angular.module('jstestApp')
         return $scope.filterBy.indexOf(tag) !== -1;
       });
     };
-    $scope.basket = {'count':7};
+    $scope.basket = BasketService.getBasket();
   }
 ]);

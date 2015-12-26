@@ -22,5 +22,6 @@ angular.module('jstestApp')
       });
     };
     $scope.basket = BasketService.getBasket();
+    $scope.addToBasket = BasketService.addToBasket;
   }
 ]);

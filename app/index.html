@@ -22,12 +22,16 @@
     <!-- Add your site or application content here -->
     <div class="container">
       <div class="header" ng-controller="MainCtrl">
-        <div class="header-text-box">
+        <div ng-show="basket.count===0" class="header-text-box">
             <p class="text-muted">It's time to order some delicious food</p>
         </div>
-        <div>
-            <p>{{basket.count}} main</p>
-            <p></p>
+        <div ng-show="basket.count > 0" class="basket">
+            <div class="basket-count-box">
+                <p>{{basket.count}} main</p>
+            </div>
+            <div class="basket-total-box">
+                <p>£{{basket.total.toFixed(2)}}</p>
+            </div>
         </div>
       </div>
         

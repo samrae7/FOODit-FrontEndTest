@@ -26,8 +26,7 @@
           
           <img class="curve" src="../images/meal-card__curve.svg">
           <p class="description">{{meal.description}}</p>
-          <div class="order-button" ng-click="basket.count = basket.count + 1"><p>Add To Your Order</p></div>
-          <p>{{basket.count}}</p>
+          <div class="order-button" ng-click="addToBasket(meal.price)"><p>Add To Your Order</p></div>
           <p class="options-text">3 options available</p>
         </div>
       </div>

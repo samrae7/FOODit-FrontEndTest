@@ -12,20 +12,34 @@ angular.module('jstestApp')
 
     var basket = {
                   'count': 0,
-                  'meals':[]
+                  'prices':[],
+                  'total':0,
+                  'hide':true
                 };
 
-    function getBasket() {
+    function getBasket() {  
       return basket;
     }
 
-    function addToBasket(meal) {
-      basket.meals.push(meal);
+    function addToBasket(price) {
+      basket.count = basket.count + 1;
+      var priceNum = Number(price); 
+      basket.prices.push(priceNum);
+      console.log(basket.prices);
+      getTotal();
+      console.log('total',basket.total);
+    }
+
+    function getTotal() { 
+        basket.total = basket.prices.reduce(function (a,b) {
+          return (a + b);
+        });
     }
 
     var service = {
       getBasket: getBasket,
-      addToBasket: addToBasket
+      addToBasket: addToBasket,
+      getTotal: getTotal
     };
 
     return service;

@@ -10,7 +10,7 @@
 angular.module('jstestApp')
   .factory('BasketService', [function () {
 
-    var basket = {'count': 7};
+    var basket = {'count': 0};
 
     function getBasket() {
       return basket;

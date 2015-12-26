@@ -21,5 +21,6 @@ angular.module('jstestApp')
         return $scope.filterBy.indexOf(tag) !== -1;
       });
     };
+    $scope.basket = {'count':7};
   }
 ]);

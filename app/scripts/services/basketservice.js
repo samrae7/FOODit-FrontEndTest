@@ -10,14 +10,22 @@
 angular.module('jstestApp')
   .factory('BasketService', [function () {
 
-    var basket = {'count': 0};
+    var basket = {
+                  'count': 0,
+                  'meals':[]
+                };
 
     function getBasket() {
       return basket;
     }
 
+    function addToBasket(meal) {
+      basket.meals.push(meal);
+    }
+
     var service = {
-      getBasket: getBasket
+      getBasket: getBasket,
+      addToBasket: addToBasket
     };
 
     return service;

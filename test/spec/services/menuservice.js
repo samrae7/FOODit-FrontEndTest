@@ -8,7 +8,7 @@ describe('Service: MenuService', function () {
   // instantiate service
   var MenuService, $httpBackend;
   beforeEach(inject(function ($injector) {
-	$httpBackend          = $injector.get('$httpBackend');
+	$httpBackend = $injector.get('$httpBackend');
 	MenuService = $injector.get('MenuService');
   }));
 

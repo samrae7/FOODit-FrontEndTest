@@ -13,8 +13,7 @@ angular.module('jstestApp')
     var basket = {
                   'count': 0,
                   'prices':[],
-                  'total':0,
-                  'hide':true
+                  'total':0
                 };
 
     function getBasket() {  
@@ -25,21 +24,21 @@ angular.module('jstestApp')
       basket.count = basket.count + 1;
       var priceNum = Number(price); 
       basket.prices.push(priceNum);
-      console.log(basket.prices);
-      getTotal();
-      console.log('total',basket.total);
+      return getTotal();
     }
 
     function getTotal() { 
         basket.total = basket.prices.reduce(function (a,b) {
           return (a + b);
         });
+        return basket.total
     }
 
     var service = {
       getBasket: getBasket,
       addToBasket: addToBasket,
-      getTotal: getTotal
+      //getTotal: getTotal,
+      //basket: basket
     };
 
     return service;

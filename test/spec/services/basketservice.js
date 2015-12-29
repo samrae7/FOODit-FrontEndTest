@@ -52,8 +52,8 @@ describe('Service: BasketService', function () {
   });
 
   it('should work out the total when the fullBasket is set', function() {
-    BasketService.setFullBasket([{'name':'chips','price':'1.00', 'quantity':1},{'name':'nachos','price':'2.00'}]);
-    expect(BasketService.getFullBasket().total).toBe(3.00);
+    BasketService.setFullBasket([{'name':'chips','price':'1.00', 'quantity':1},{'name':'nachos','price':'2.00','quantity':2}]);
+    expect(BasketService.getFullBasket().total).toBe(5.00);
   });
 
   it('should work out the total when an item is added to the fullBasket', function() {

@@ -54,7 +54,7 @@ angular.module('jstestApp')
     function getFullBasketTotal() {
       var total = 0;
       fullBasket.items.forEach(function (element){
-        total += Number(element.price);
+        total += (Number(element.price) * element.quantity);
       });
       fullBasket.total = total;
       return total;
@@ -76,10 +76,6 @@ angular.module('jstestApp')
       getFullBasketTotal();
     }
 
-    // function expandBasket(state) {
-    //   return (state ? false : true);
-    // }
-
     var expandBasket = false;
 
     var service = {
@@ -89,7 +85,6 @@ angular.module('jstestApp')
       addToFullBasket: addToFullBasket,
       setFullBasket: setFullBasket,
       expandBasket: expandBasket
-      //getCount: getCount
     };
 
     return service;

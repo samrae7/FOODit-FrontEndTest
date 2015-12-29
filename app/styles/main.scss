@@ -76,7 +76,7 @@ h3 {
     .basket-total-box {
       @extend .header-text-box;
       float:right;
-      width:12%;
+      width:17%;
     }
 
     .basket-row {
@@ -91,7 +91,7 @@ h3 {
 
       .basket-name-box {
         @extend .header-text-box;
-        width:60.2%;
+        width:57.2%;
         float: left;
         p {
           text-align:left;
@@ -245,7 +245,7 @@ h3 {
 }
 
 .confirm-button {
-  width: 68%;
+  width: 64%;
   float: left;
   padding: 0.4em 0.85em;
   border: 1px solid;

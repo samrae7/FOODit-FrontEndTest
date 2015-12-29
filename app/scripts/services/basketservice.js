@@ -29,7 +29,7 @@ angular.module('jstestApp')
       var count = 0;
       items.forEach(function(element){
         count += element.quantity;
-      })
+      });
       return count;
     }
 

@@ -17,5 +17,6 @@ angular.module('jstestApp')
     $scope.fullBasket = BasketService.getFullBasket();
     $scope.addToFullBasket = BasketService.addToFullBasket;
     $scope.expandBasket = BasketService.expandBasket;
+    $scope.setFullBasket = BasketService.setFullBasket;
   }
 ]);

@@ -8,7 +8,6 @@
 }
 
 body {
-  background-color: $background-color;
   margin: 0;
 }
 
@@ -19,6 +18,7 @@ h3 {
 .page-wrapper {
   width:400px;
   margin: 0 auto;
+  background-color:$background-color;
 }
 
 .blue-box {
@@ -218,6 +218,11 @@ h3 {
           @extend .blue-box;
           text-align: center;
           margin: 1em 0 0.5em 0;
+        }
+
+        div.order-button:active {
+          color:$cornflower-blue;
+          background-color:white;
         }
 
         .options-text {

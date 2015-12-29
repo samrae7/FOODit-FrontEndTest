@@ -11,7 +11,7 @@ FOODit-jsTest
     ```
 3. Run `grunt serve`
 
-This is a code test I did for FoodIt ( see the instructions I recieved below)
+This is a code test I did for FoodIt ( see the instructions I received below)
 
 =============
 ORIGINAL INSTRUCTIONS

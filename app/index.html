@@ -22,18 +22,18 @@
     <div class="page-wrapper">
         <div class="container">
           <div class="header" ng-controller="MainCtrl">
-            <div ng-show="basket.count===0" class="header-text-box">
+            <div ng-show="fullBasket.count===0" class="header-text-box">
                 <p class="text-muted">It's time to order some delicious food</p>
             </div>
-            <div class="basket" ng-show="basket.count > 0">
+            <div class="basket" ng-show="fullBasket.count > 0 && expandBasket===false">
                 <div class="basket-count-box">
                     <p>{{fullBasket.count}} main</p>
                 </div>
-                <div class="basket-total-box">
+                <div ng-click="expandBasket = true" class="basket-total-box">
                     <p>£{{fullBasket.total.toFixed(2)}}</p>
                 </div>
             </div>
-            <div class="expanded-basket">
+            <div class="expanded-basket" ng-show="expandBasket">
                 <ul>
                     <li ng-repeat="item in fullBasket.items">
                         <div class="basket-quantity-box">
@@ -48,7 +48,7 @@
                     </li>
                 </ul>
                 <div class="basket-total-container">
-                    <div class="basket-total-box">
+                    <div ng-click="expandBasket=false" class="basket-total-box">
                         <p>Total: £{{fullBasket.total.toFixed(2)}}</p>
                     </div>  
                 </div>

@@ -76,12 +76,19 @@ angular.module('jstestApp')
       getFullBasketTotal();
     }
 
+    // function expandBasket(state) {
+    //   return (state ? false : true);
+    // }
+
+    var expandBasket = false;
+
     var service = {
       getBasket: getBasket,
       addToBasket: addToBasket,
       getFullBasket: getFullBasket,
       addToFullBasket: addToFullBasket,
       setFullBasket: setFullBasket,
+      expandBasket: expandBasket
       //getCount: getCount
     };
 

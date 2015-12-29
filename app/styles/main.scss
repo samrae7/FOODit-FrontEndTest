@@ -11,6 +11,10 @@ body {
   background-color: $background-color;
   margin: 0;
 }
+.page-wrapper {
+  max-width:400px;
+  margin: 0 auto;
+}
 
 .blue-box {
   background-color: $cornflower-blue;
@@ -46,7 +50,49 @@ body {
     .basket-total-box {
       @extend .header-text-box;
       float:right;
+      width:34%;
+    }
+  }
+
+  .expanded-basket {
+    width:100%;
+
+
+    .basket-count-box {
+      @extend .header-text-box;
+      float:left;
       width:30%; 
+    }
+
+    .basket-total-container {
+      height: 25px;
+    }
+
+    .basket-total-box {
+      @extend .header-text-box;
+      float:right;
+      width:34%;
+    }
+
+     .basket-quantity-box {
+      @extend .basket-count-box;
+      width:4%;
+      clear:left;
+    }
+
+    .basket-name-box {
+      @extend .basket-count-box;
+      width:60.2%;
+    }
+
+    .basket-price-box {
+      @extend .basket-total-box;
+      width:12%;
+    }
+
+    li {
+    list-style:none;
+    height:44px;
     }
   }
 }

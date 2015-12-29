@@ -18,33 +18,54 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
     <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header" ng-controller="MainCtrl">
-        <div ng-show="basket.count===0" class="header-text-box">
-            <p class="text-muted">It's time to order some delicious food</p>
-        </div>
-        <div ng-show="basket.count > 0" class="basket">
-            <div class="basket-count-box">
-                <p>{{basket.count}} main</p>
+    <div class="page-wrapper">
+        <div class="container">
+          <div class="header" ng-controller="MainCtrl">
+            <div ng-show="basket.count===0" class="header-text-box">
+                <p class="text-muted">It's time to order some delicious food</p>
             </div>
-            <div class="basket-total-box">
-                <p>£{{basket.total.toFixed(2)}}</p>
+            <div class="basket" ng-show="basket.count > 0">
+                <div class="basket-count-box">
+                    <p>{{fullBasket.count}} main</p>
+                </div>
+                <div class="basket-total-box">
+                    <p>£{{fullBasket.total.toFixed(2)}}</p>
+                </div>
             </div>
-        </div>
-      </div>
-        
-      <div class ='wrapper'>
-        <h3>Your Delicious Restaurant</h3>
-        <div ng-view="">
-              
-        </div>
-      </div>
+            <div class="expanded-basket">
+                <ul>
+                    <li ng-repeat="item in fullBasket.items">
+                        <div class="basket-quantity-box">
+                            <p>{{item.quantity}}</p>
+                        </div>
+                        <div class="basket-name-box">
+                            <p>{{item.name | limitTo:22}}</p>
+                        </div>
+                        <div class="basket-price-box">
+                            <p>{{item.price}}</p>
+                        </div>  
+                    </li>
+                </ul>
+                <div class="basket-total-container">
+                    <div class="basket-total-box">
+                        <p>Total: £{{fullBasket.total.toFixed(2)}}</p>
+                    </div>  
+                </div>
+            </div>
+          </div>
+            
+          <div class ='wrapper'>
+            <h3>Your Delicious Restaurant</h3>
+            <div ng-view="">
+                  
+            </div>
+          </div>
 
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from FOODit and the Yeoman team.</p>
-      </div>
+          <div class="footer">
+            <p><span class="glyphicon glyphicon-heart"></span> from FOODit and the Yeoman team.</p>
+          </div>
+        </div>
     </div>
 
     <!-- build:js(.) scripts/oldieshim.js -->

@@ -22,6 +22,10 @@ angular.module('jstestApp')
     //   });
     // };
     $scope.basket = BasketService.getBasket();
+    $scope.fullBasket = BasketService.getFullBasket();
+    //$scope.count = BasketService.getCount();
     $scope.addToBasket = BasketService.addToBasket;
+    $scope.addToFullBasket = BasketService.addToFullBasket;
+
   }
 ]);

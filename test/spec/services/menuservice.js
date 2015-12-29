@@ -21,7 +21,7 @@ describe('Service: MenuService', function () {
     expect(!!MenuService).toBe(true);
   });
 
-  it('should load the menu json', function() {
+  it('should load the menu json', function() {  
 	var menuData = {'resultCount': 2, 'offset': 0, 'pageSize': 20, 'meals': [
 	  { id: '123' },
 	  { id: '456' }

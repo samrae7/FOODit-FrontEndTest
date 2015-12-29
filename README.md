@@ -1,6 +1,22 @@
 FOODit-jsTest
 =============
 
+##To view this project:
+
+1. Clone this GitHub repo
+2. Install Node.js and Bower dependencies.
+
+    ```sh
+    npm install
+    ```
+3. Run `grunt serve`
+
+This is a code test I did for FoodIt ( see the instructions I recieved below)
+
+=============
+ORIGINAL INSTRUCTIONS
+========
+
 ## Getting started
 
 1. Fork this Github repository.

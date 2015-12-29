@@ -16,7 +16,6 @@ angular.module('jstestApp')
                   'total':0
                 };
 
-    // var fullBasket = [{'name':'mushy-peas', 'price':'3.00'}];
     var fullBasket = {'count':0,
                       'total':0,
                       'items':[]

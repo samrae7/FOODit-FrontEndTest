@@ -22,22 +22,22 @@
     <div class="page-wrapper">
         <div class="container">
           <div class="header" ng-controller="MainCtrl">
-            <div ng-show="fullBasket.count===0" class="header-text-box basket-outline">
+            <div ng-show="basket.count===0" class="header-text-box basket-outline">
                 <p class="text-muted">It's time to order some delicious food</p>
             </div>
-            <div class="basket" ng-show="fullBasket.count > 0 && expandBasket===false">
+            <div class="basket" ng-show="basket.count > 0 && expandBasket===false">
                 <div class="basket-count-box basket-outline">
-                    <p>{{fullBasket.count}} main</p>
+                    <p>{{basket.count}} main</p>
                 </div>
                 <div ng-click="expandBasket = true" class="basket-total-box basket-outline">
-                    <p>£{{fullBasket.total.toFixed(2)}}</p>
+                    <p>£{{basket.total.toFixed(2)}}</p>
                 </div>
             </div>
             <div class="expanded-basket" ng-show="expandBasket">
             <h3>Your Order</h3>
             <p class="basket-subheading">A Delicious Restaurant</p>
                 <ul>
-                    <li ng-repeat="item in fullBasket.items">
+                    <li ng-repeat="item in basket.items">
                         <div class="basket-row basket-outline">
                             <div class="basket-quantity-box">
                                 <p>{{item.quantity}}</p>
@@ -52,11 +52,11 @@
                     </li>
                 </ul>
                 <div class="basket-total-row">
-                    <div ng-click="expandBasket=false; setFullBasket([])" class="confirm-button">
+                    <div ng-click="expandBasket=false; setBasket([])" class="confirm-button">
                         <p>Confirm your order</p>
                     </div>
                     <div ng-click="expandBasket=false" class="basket-total-box basket-outline">
-                        <p>£{{fullBasket.total.toFixed(2)}}</p>
+                        <p>£{{basket.total.toFixed(2)}}</p>
                     </div>  
                 </div>
             </div>

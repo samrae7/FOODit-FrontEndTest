@@ -10,22 +10,22 @@
 angular.module('jstestApp')
   .factory('BasketService', [function () {
 
-    var fullBasket = {'count':0,
+    var basket = {'count':0,
                       'total':0,
                       'items':[]
                     };
 
-    function getFullBasket() {
-      return fullBasket;
+    function getBasket() {
+      return basket;
     }
 
-    function setFullBasket(items) {
-      fullBasket.items = items;
-      fullBasket.count = getFullBasketCount(items);
-      getFullBasketTotal();
+    function setBasket(items) {
+      basket.items = items;
+      basket.count = getBasketCount(items);
+      getBasketTotal();
     }
 
-    function getFullBasketCount(items) {
+    function getBasketCount(items) {
       var count = 0;
       items.forEach(function(element){
         count += element.quantity;
@@ -33,18 +33,18 @@ angular.module('jstestApp')
       return count;
     }
 
-    function getFullBasketTotal() {
+    function getBasketTotal() {
       var total = 0;
-      fullBasket.items.forEach(function (element){
+      basket.items.forEach(function (element){
         total += (Number(element.price) * element.quantity);
       });
-      fullBasket.total = total;
+      basket.total = total;
       return total;
     }
 
-    function addToFullBasket(item) {
+    function addToBasket(item) {
       var inArray = false;
-      fullBasket.items.forEach(function(element) {
+      basket.items.forEach(function(element) {
         if (element.name === item.name) {
           element.quantity += 1;
           inArray = true;
@@ -52,18 +52,18 @@ angular.module('jstestApp')
       });
       if (inArray === false) {
         item.quantity = 1;
-        fullBasket.items.push(item);
+        basket.items.push(item);
       }
-      fullBasket.count = fullBasket.count + 1;
-      getFullBasketTotal();
+      basket.count = basket.count + 1;
+      getBasketTotal();
     }
 
     var expandBasket = false;
 
     var service = {
-      getFullBasket: getFullBasket,
-      addToFullBasket: addToFullBasket,
-      setFullBasket: setFullBasket,
+      getBasket: getBasket,
+      addToBasket: addToBasket,
+      setBasket: setBasket,
       expandBasket: expandBasket
     };
 

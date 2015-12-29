@@ -19,8 +19,8 @@ describe('Controller: MainCtrl', function () {
 	  return func({resultCount: 1});
 	};
 	spyOn(MenuService, 'get').and.returnValue({success: success});
-  // spyOn(BasketService, 'getFullBasket').and.callThrough();//.and.returnValue({success: success});
-  spyOn(BasketService, 'getFullBasket').and.returnValue({'baked beans':1.00});
+  // spyOn(BasketService, 'getBasket').and.callThrough();//.and.returnValue({success: success});
+  spyOn(BasketService, 'getBasket').and.returnValue({'baked beans':1.00});
     MainCtrl = $controller('MainCtrl', {
       $scope: scope
     });
@@ -33,8 +33,8 @@ describe('Controller: MainCtrl', function () {
   });
 
   it('should call the basket service to retrieve the basket data', function () {
-  expect(BasketService.getFullBasket).toHaveBeenCalled();
-  expect(scope.fullBasket).toEqual({'baked beans':1.00});
+  expect(BasketService.getBasket).toHaveBeenCalled();
+  expect(scope.basket).toEqual({'baked beans':1.00});
   }); 
 
 });

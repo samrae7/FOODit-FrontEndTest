@@ -10,44 +10,27 @@
 angular.module('jstestApp')
   .factory('BasketService', [function () {
 
-    var basket =  {
-                  'count': 0,
-                  'prices':[],
-                  'total':0
-                };
-
     var fullBasket = {'count':0,
                       'total':0,
                       'items':[]
                     };
 
-    //var count = 0;  
-
-    function getBasket() {  
-      return basket;
-    }
-
-    function addToBasket(price) {
-      basket.count = basket.count + 1;
-      var priceNum = Number(price); 
-      basket.prices.push(priceNum);
-      return getTotal();
-    }
-
-    function getTotal() { 
-        basket.total = basket.prices.reduce(function (a,b) {
-          return (a + b);
-        });
-        return basket.total;
-    }
-
     function getFullBasket() {
       return fullBasket;
     }
 
-    function setFullBasket(object) {
-      fullBasket.items = object;
+    function setFullBasket(items) {
+      fullBasket.items = items;
+      fullBasket.count = getFullBasketCount(items);
       getFullBasketTotal();
+    }
+
+    function getFullBasketCount(items) {
+      var count = 0;
+      items.forEach(function(element){
+        count += element.quantity;
+      })
+      return count;
     }
 
     function getFullBasketTotal() {
@@ -78,8 +61,6 @@ angular.module('jstestApp')
     var expandBasket = false;
 
     var service = {
-      getBasket: getBasket,
-      addToBasket: addToBasket,
       getFullBasket: getFullBasket,
       addToFullBasket: addToFullBasket,
       setFullBasket: setFullBasket,

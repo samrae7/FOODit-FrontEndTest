@@ -16,10 +16,10 @@ describe('Service: BasketService', function () {
   });
 
   it('should add one to the count and add the price to the total', function() {
-    BasketService.addToBasket('8.5');
-    expect(BasketService.getBasket().count).toBe(1);
-    expect(BasketService.addToBasket('9.5')).toBe(18);
-    expect(BasketService.getBasket().count).toBe(2); 
+     BasketService.setFullBasket([{'name':'baked beans', 'price':'8.00','quantity':1}]);
+    BasketService.addToFullBasket({'name':'baked beans', 'price':'8.00'});
+    expect(BasketService.getFullBasket().count).toBe(2);
+    expect(BasketService.getFullBasket().total).toBe(16.00); 
 
   });
 

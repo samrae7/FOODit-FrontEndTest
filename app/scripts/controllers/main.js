@@ -14,9 +14,7 @@ angular.module('jstestApp')
   	  $scope.menu = data;
   	});
 
-    $scope.basket = BasketService.getBasket();
     $scope.fullBasket = BasketService.getFullBasket();
-    $scope.addToBasket = BasketService.addToBasket;
     $scope.addToFullBasket = BasketService.addToFullBasket;
     $scope.expandBasket = BasketService.expandBasket;
   }

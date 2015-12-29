@@ -22,34 +22,41 @@
     <div class="page-wrapper">
         <div class="container">
           <div class="header" ng-controller="MainCtrl">
-            <div ng-show="fullBasket.count===0" class="header-text-box">
+            <div ng-show="fullBasket.count===0" class="header-text-box basket-outline">
                 <p class="text-muted">It's time to order some delicious food</p>
             </div>
             <div class="basket" ng-show="fullBasket.count > 0 && expandBasket===false">
-                <div class="basket-count-box">
+                <div class="basket-count-box basket-outline">
                     <p>{{fullBasket.count}} main</p>
                 </div>
-                <div ng-click="expandBasket = true" class="basket-total-box">
+                <div ng-click="expandBasket = true" class="basket-total-box basket-outline">
                     <p>£{{fullBasket.total.toFixed(2)}}</p>
                 </div>
             </div>
             <div class="expanded-basket" ng-show="expandBasket">
+            <h3>Your Order</h3>
+            <p class="basket-subheading">A Delicious Restaurant</p>
                 <ul>
                     <li ng-repeat="item in fullBasket.items">
-                        <div class="basket-quantity-box">
-                            <p>{{item.quantity}}</p>
+                        <div class="basket-row basket-outline">
+                            <div class="basket-quantity-box">
+                                <p>{{item.quantity}}</p>
+                            </div>
+                            <div class="basket-name-box">
+                                <p>{{item.name | limitTo:22}}</p>
+                            </div>
+                            <div class="basket-price-box">
+                                <p>£{{item.price}}</p>
+                            </div>  
                         </div>
-                        <div class="basket-name-box">
-                            <p>{{item.name | limitTo:22}}</p>
-                        </div>
-                        <div class="basket-price-box">
-                            <p>{{item.price}}</p>
-                        </div>  
                     </li>
                 </ul>
-                <div class="basket-total-container">
-                    <div ng-click="expandBasket=false" class="basket-total-box">
-                        <p>Total: £{{fullBasket.total.toFixed(2)}}</p>
+                <div class="basket-total-row">
+                    <div class="confirm-button">
+                        <p>Confirm your order</p>
+                    </div>
+                    <div ng-click="expandBasket=false" class="basket-total-box basket-outline">
+                        <p>£{{fullBasket.total.toFixed(2)}}</p>
                     </div>  
                 </div>
             </div>
